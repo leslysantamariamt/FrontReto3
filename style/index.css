@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(121, 221, 216);
+    background-size: 100% 100%;
+    
+  }
+
+.navbar .container #logo {
+    width: 800px;
+    height: 150px;
+    background: url(./logo.jpg) 0 0;
+  }
+
+.container-fluid .navbar .container #tittle{
+    font-family: "Lucida Handwriting", Fantasy;
+    font-size: 40px;
+    color: rgb(22, 66, 83);
+}
+
+.container-fluid .navbar #login1 {
+  font-family: "Lucida Handwriting", Fantasy;
+  font-size: 18px;
+}
+
+.container-fluid .pt-2{
+    font-family: "Lucida Handwriting", Fantasy;
+    font-size: 20px;
+    color: rgb(22, 66, 83);
+}
+
+.container-fluid .container .rounded .col-md-4 .container .pt-3 .col .card{
+  font-family: "Lucida Handwriting",Fantasy;
+  font-size: 15px;
+}

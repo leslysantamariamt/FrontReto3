@@ -1,0 +1,48 @@
+body {
+    background: url(./fondo.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    
+  }
+
+.navbar .container #logo {
+    width: 800px;
+    height: 150px;
+    background: url(./logo.jpg) 0 0;
+  }
+
+
+
+.container-fluid .navbar .container #tittle{
+    font-family: "Lucida Handwriting", Fantasy;
+    font-size: 40px;
+    color: rgb(22, 66, 83);
+}
+
+.container-fluid .pt-2{
+    font-family: "Lucida Handwriting", Fantasy;
+    font-size: 20px;
+    color: rgb(22, 66, 83);
+}
+
+.container-fluid .navbar #ingresar {
+  font-family: "Lucida Handwriting", Fantasy;
+  font-size: 18px;
+}
+
+.container-fluid .container .rounded .col-md-10 .container .pt-3 .col .card{
+  font-family: "Script MT",Fantasy;
+  font-size: 25px;
+}
+
+.container-fluid .container .rounded .col-md-14 .text-center h1{
+  font-family: "Lucida Handwriting",Fantasy;
+  font-size: 35px;
+  text-shadow: 5px 5px 5px #5fc5c0;
+  color: #3a196b;
+}
+
+.container-fluid .container .rounded .col-md-14 .dates{
+  font-family: "Script MT",Fantasy;
+  font-size: 25px;
+  color: #2b4bb3;
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanquita LTDA - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/administradorUser.js"></script>
+    <script src="js/administradorProduct.js"></script>
+    <link rel="shortcut icon" href="image/Logo_Blanquita.jpg">
+</head>
+
+<body>
+    <div class="container-fluid vh-100">
+        <nav class="navbar">
+            <img src="image/Logo_Blanquita.jpg" class="card-img-top-left" style="max-width: 10%" alt="Logo Blanquita">
+            <div class="container d-flex justify-content-center " id="top">
+                <p>
+                <h1 class="title-center " id="tittle">BIENVENIDOS A BLANQUITA LTDA</h1>
+                </p>
+            </div>
+        </nav>
+        <nav class="navbar-center" id="top">
+            <div class="pt-2">
+                <figure class="text-center">
+                    <blockquote class="navbar-footer">
+                        <p class="text" id="subtittle">Productos de aseo de alta calidad</h2>
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer" id="fsubtittle">
+                        The Best - G20: <cite title="Source Title">Leidy Cruz - Edison Torres - Cristian Fabian Gomez -
+                            Luis Carreazo - Lesly Santamaria.</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </nav>
+        <hr />
+        <div class="container-fluid vh-100 " style="margin-top: 20x;">
+            <div class="container d-flex justify-content-center" style="margin-top: 20px;">
+                <div class="rounded d-flex justify-content-center" >
+                    <div id="tipousuario" class="card text-center mb-2 ">
+                        <div class="card-header">
+                            <h1 class="title-center">USUARIOS</h1> <a href="registrarUser.html" class="btn btn-light" >Crear nuevo usuario/ Create new user</a>
+                        </div>
+                        <div id="info">
+                            <table class="table table-hover">
+                                <thead>
+                                    <th>Identificación / SSN</th>
+                                    <th>Nombre / Name</th>
+                                    <th>Direción / Address</th>
+                                    <th>Celular / Cellphone</th>
+                                    <th>Correo / Email</th>
+                                    <th>Zona / Zone</th>
+                                    <th>Tipo / Type</th>
+                                    <th colspan="2">Actions / Acciones</th>
+                                </thead>
+                                <tbody id="allItemsUser"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /> 
+            <div class="container d-flex justify-content-center" style="margin-top: 20px;">
+                <div  class="rounded d-flex justify-content-left">
+                    <div  id="tipoproducto" class="card text-center mb-2 ">
+                        <div  class="card-header">
+                            <h1 class="title-center">PRODUCTOS</p></h1> <a href="registrarProduct.html" class="btn btn-light" >Crear nuevo producto/ Create new product</a>
+                        </div>
+                        <div id="infoProduct">
+                            <table class="table table-hover">
+                                <thead>
+                                    <th>Código / Code</th>
+                                    <th>Marca / Brand</th>
+                                    <th>Categoria / Category</th>
+                                    <th>Presentación / Presentation</th>
+                                    <th>Descripción / Description</th>
+                                    <th>Precio / Price</th>
+                                    <th>Disponibilidad / Availability</th>
+                                    <th>Stock</th>
+                                    <th>Foto / Photo</th>
+                                    <th colspan="2">Actions / Acciones</th>
+                                </thead>
+                                <tbody id="allItemsProduct"></tbody>
+                            </table>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="col-md-12 col-sm-50 shadow-lg">
+            <div class="datos" style="margin-top: 10px; margin: 10px;">
+                <div class="text-center">
+                    <form action="" id="actualizarUser" style="display: none;">
+                        <div class="text-center" style="margin-top: 20px; ">
+                            <h1 class="title-center">ACTUALIZAR USUARIO</h1>
+                        <hr/>
+                        <p>Aqui puedes actualizar un usuario</p>
+                        </div> 
+                        <div class="row">
+                            <div class="col">
+                                <fieldset disabled>
+                                <div class="mb-1">
+                                    <label class="form-label">ID</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-person-check text-white"></i></span>
+                                        <input type="text" class="form-control" id="id" placeholder="1">                                 
+                                    </div>
+                                    </div>           
+                                </fieldset>
+                                <div class="mb-1">
+                                    <label class="form-label">Identificación / SSN</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-person-badge text-white"></i></span>
+                                        <input type="text" class="form-control" id="ssn" placeholder="1111112">
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <label class="form-label">Nombre / Name</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-person-plus-fill text-white"></i></span>
+                                        <input type="text" class="form-control" id="nameU" placeholder="Pepito Perez">
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <label class="form-label">Dirección / Address</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-shop text-white"></i></span>
+                                        <input type="text" class="form-control" id="address" placeholder="CR 19-45C 22">
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <label class="form-label">Celular / Cellphone</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-phone text-white"></i></span>
+                                        <input type="text" class="form-control" id="cellPhone" placeholder="31111111">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-1">
+                                    <label for="exampleInputEmail1" class="form-label">Correo Electrónico / Email address</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text text-white bg-primary">@</span>
+                                        <input type="email" class="form-control" id="emailC" aria-describedby="emailHelp" placeholder="name@example.com">
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <label for="exampleInputEmail1" class="form-label">Zona / Zone</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-geo-alt text-white"></i></span>                                        
+                                        <input type="text" class="form-control" id="zone"  placeholder="Zona 1">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-1">
+                                    <label for="exampleInputEmail1" class="form-label">Tipo / Type</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-person-circle text-white"></i></span>
+                                        <input type="text" class="form-control" id="type" placeholder="Admin">
+                                    </div>
+                                </div>
+                           
+                                <div class="mb-1">
+                                    <label for="exampleInputPassword1" class="form-label">Contraseña / Password</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-key-fill text-white"></i></span>
+                                        <input type="password" class="form-control" id="passwordC" placeholder="Password">
+                                        <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"><span class="fa fa-eye-slash icon"></span></button>
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <label for="exampleInputPassword1" class="form-label">Confirmar Contraseña / Verify Password</label>
+                                    <div class=" input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i class="bi bi-key-fill text-white"></i></span>
+                                        <input type="password" class="form-control" id="passwordCC" placeholder="Password">
+                                        <button id="show_password2" class="btn btn-primary" type="button" onclick="mostrarPasswordVerification()"><span class="fa fa-eye-slash icon"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type ="button" class="btn btn-success" id="actualizar" onclick="putUser()">Actualizar / Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-12 col-sm-50 shadow-lg">
+                <div class="datos" style="margin-top: 10px; margin: 10px;">
+                    <div class="text-center">
+                        <form action="" id="actualizarFormProducto" style="display: none;">
+                            <div class="text-center" style="margin-top: 20px; ">
+                                <h1 class="title-center">ACTUALIZAR PRODUCTO</h1>
+                            <hr/>
+                            <p>Aqui puedes actualizar un producto</p>
+                            </div> 
+                            <div class="row">
+                                <div class="col">
+                                    <fieldset disabled>
+                                    <div class="mb-1">
+                                        <label class="form-label">Código / Code</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text bg-primary"><i class="bi bi-person-check text-white"></i></span>
+                                            <input type="text" class="form-control" id="idp" placeholder="1">                                 
+                                        </div>
+                                        </div>           
+                                    </fieldset>
+                                    <div class="mb-1">
+                                        <label class="form-label">Marca / Brand</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text text-white bg-primary">B</span>
+                                            <input type="text" class="form-control" id="brand" placeholder="MBP-POWER2">
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label">Categoria / Category</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text bg-primary"><i class="bi bi-tag text-white"></i></span>
+                                            <input type="text" class="form-control" id="category" placeholder="Desengrasante">
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label">Presentación / Presentation</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text bg-primary"><i class="bi bi-recycle text-white"></i></span>
+                                            <input type="text" class="form-control" id="presentation" placeholder="Botella">
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label">Descripción / Description</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text bg-primary"><i class="bi bi-file-richtext text-white"></i></span>
+                                            <input type="text" class="form-control" id="description" placeholder="Gel desengrasante">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-1">
+                                        <label for="exampleInputEmail1" class="form-label">Precio / Price</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text text-white bg-primary"><i class="bi bi-cash-coin text-white"></i></span>
+                                            <input type="price" class="form-control" id="price" placeholder="25000">
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="exampleInputEmail1" class="form-label">Disponibilidad / Availability</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text bg-primary"><i class="bi bi-patch-check text-white"></i></span>                                        
+                                            <input type="text" class="form-control" id="availability"  placeholder="True">
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="exampleInputEmail1" class="form-label">Stock</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text bg-primary"><i class="bi bi-list-check text-white"></i></span>
+                                            <input type="text" class="form-control" id="quantity" placeholder="200">
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="exampleInputPassword1" class="form-label">Foto / Photo</label>
+                                        <div class=" input-group mb-3">
+                                            <span class="input-group-text bg-primary"><i class="bi bi-card-image text-white"></i></span>
+                                            <input type="url" class="form-control" id="photography" placeholder="https://www.cleaningprod.com/blanchqe1.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button type ="button" class="btn btn-success" id="actualizarProducto" onclick="putProduct()">Actualizar / Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+            <footer class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <svg class="bi" width="30" height="24">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
+                    </a>
+                    <span class="text-muted">&copy; 2021 The Best - G20 - Ciclo 4, Inc</span>
+                </div>
+            </footer>
+        </div>
+        
+    </div>
+</body>
+</html>
